@@ -1,7 +1,9 @@
 import React from 'react';
 import Expense from "./Expense/Expense";
+import './MyFinances.css';
 
 const MyFinances = (props) => {
+    const totalSpent = props.finances.reduce((total, exp) => (total + exp.cost), 0);
     return (
         <div className='MyFinances'>
             {props.finances.map((expense) => (
@@ -9,8 +11,10 @@ const MyFinances = (props) => {
                     key={expense.id}
                     name={expense.name}
                     cost={expense.cost}
+                    remove={() => props.remove(expense.id)}
                 />
             ))}
+            <div className='Total'>Total spent: <b>{totalSpent}</b> <i>KGS</i></div>
         </div>
 
     );

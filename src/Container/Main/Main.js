@@ -7,19 +7,15 @@ import nanoid from 'nanoid';
 
 class Main extends Component{
     state = {
-        currentFinance: {name: 'Something', cost: '1000'},
+        currentFinance: {name: 'Something', cost: 1000},
         finances: []
     };
     add = (event) => {
         event.preventDefault();
-        console.log('hello');
         let finances = [...this.state.finances];
         let currentF = {...this.state.currentFinance, id: nanoid()};
         finances.push(currentF);
         this.setState({finances});
-        setTimeout(() => { //todo: temp console.log
-            console.log(this.state.finances);
-        }, 1000);
     };
     changeName = (event) => {
         let currentFinance = {...this.state.currentFinance};
@@ -28,8 +24,14 @@ class Main extends Component{
     };
     changeCost = (event) => {
         let currentFinance = {...this.state.currentFinance};
-        currentFinance.cost = event.target.value;
+        currentFinance.cost = parseInt(event.target.value);
         this.setState({currentFinance});
+    };
+    remove = (id) => {
+        let finances = [...this.state.finances];
+        let index = finances.findIndex(exp => exp.id === id);
+        finances.splice(index, 1);
+        this.setState({finances});
     };
     render() {
         return(
@@ -43,6 +45,7 @@ class Main extends Component{
                 />
                 <MyFinances
                     finances={this.state.finances}
+                    remove={this.remove}
                 />
             </div>
         );

@@ -1,0 +1,18 @@
+.MyFinances{
+    overflow-y: scroll;
+    margin-top: 30px;
+    padding: 10px;
+    height: 350px;
+    border: 1px solid #44818b;
+    border-radius: 5px;
+}
+.MyFinances .Total{
+    background: #3d737c;
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    left: 50%;
+    color: #fff;
+}

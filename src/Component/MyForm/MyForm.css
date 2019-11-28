@@ -2,6 +2,11 @@
     display: flex;
     justify-content: space-around;
 }
+.MyForm input{
+    border-radius: 3px;
+    border: 1px solid #44818b;
+    font-size: 17px;
+}
 .MyForm input[type='text']{
     width: 45%;
 }
@@ -13,9 +18,12 @@
 
 .MyForm span{
     width: 15%;
+    padding: 0 10px;
 }
 
 .Btn{
+    font-size: 16px;
+    text-transform: uppercase;
     width: 25%;
     font-weight: bold;
     background: rgb(29,57,88);

@@ -1,3 +1,20 @@
 .Expense{
+    padding: 10px 0;
     display: flex;
+    justify-content: flex-end;
+}
+.Expense span{
+    padding: 0 15px 0 0;
+}
+.Expense span:first-child{
+    margin-right: auto;
+}
+
+.Expense .Remover{
+    font-weight: bold;
+    color: #3d737c;
+    cursor: pointer;
+}
+.Expense .Remover:active{
+    color: red;
 }
