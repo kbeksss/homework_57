@@ -1,0 +1,19 @@
+.Diagram{
+    padding-top: 20px;
+    display: flex;
+    height: 40px;
+    width: 100%;
+}
+.Diagram div{
+    border: 1px solid #3d737c;
+}
+
+.Diagram .Entertainment{
+    background: #a91d12;
+}
+.Diagram .Car{
+    background: #00007f;
+}
+.Diagram .Food{
+    background: #005d00;
+}

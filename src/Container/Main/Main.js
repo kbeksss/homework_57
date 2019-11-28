@@ -4,6 +4,7 @@ import MyForm from "../../Component/MyForm/MyForm";
 import './Main.css';
 import MyFinances from "../../Component/MyFinances/MyFinances";
 import nanoid from 'nanoid';
+import DiagramWrapper from "../../Component/DiagramWrapper/DiagramWrapper";
 
 class Main extends Component{
     state = {
@@ -39,6 +40,7 @@ class Main extends Component{
         this.setState({finances});
     };
     render() {
+        const totalSpent = this.state.finances.reduce((total, exp) => (total + exp.cost), 0);
         return(
             <div className='Main'>
                 <MyForm
@@ -52,7 +54,9 @@ class Main extends Component{
                 <MyFinances
                     finances={this.state.finances}
                     remove={this.remove}
+                    totalSpent={totalSpent}
                 />
+                <DiagramWrapper total={totalSpent} finances={this.state.finances}/>
             </div>
         );
     }
