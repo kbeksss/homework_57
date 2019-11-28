@@ -1,11 +1,15 @@
 .Diagram{
     padding-top: 20px;
     display: flex;
-    height: 40px;
+    height: 35px;
     width: 100%;
+    font-size: 12px;
+    color: #fff;
 }
 .Diagram div{
     border: 1px solid #3d737c;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .Diagram .Entertainment{
