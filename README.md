@@ -1,4 +1,4 @@
-##Первое задание находится в файле task1
+##Первое задание (task1) находится в src
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
