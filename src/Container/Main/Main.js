@@ -7,7 +7,7 @@ import nanoid from 'nanoid';
 
 class Main extends Component{
     state = {
-        currentFinance: {name: 'Something', cost: 1000},
+        currentFinance: {name: 'Something', cost: 1000, type: 'Food'},
         finances: []
     };
     add = (event) => {
@@ -27,6 +27,11 @@ class Main extends Component{
         currentFinance.cost = parseInt(event.target.value);
         this.setState({currentFinance});
     };
+    changeType = (event) => {
+        let currentFinance = {...this.state.currentFinance};
+        currentFinance.type = event.target.value;
+        this.setState({currentFinance})
+    };
     remove = (id) => {
         let finances = [...this.state.finances];
         let index = finances.findIndex(exp => exp.id === id);
@@ -41,6 +46,7 @@ class Main extends Component{
                     cost={this.state.currentFinance.cost}
                     changeName={(event) => this.changeName(event)}
                     changeCost={(event) => this.changeCost(event)}
+                    radio={(event) => this.changeType(event)}
                     submit={(event) => this.add(event)}
                 />
                 <MyFinances

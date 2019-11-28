@@ -8,23 +8,28 @@
     font-size: 17px;
 }
 .MyForm input[type='text']{
-    width: 45%;
+    width: 30%;
 }
 
 .MyForm input[type='number']{
     width: 15%;
     margin-left: 5px;
 }
-
+.MyForm .Radio{
+    width: 25%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
 .MyForm span{
-    width: 15%;
-    padding: 0 10px;
+    width: 5%;
+    padding: 0 2px;
 }
 
 .Btn{
     font-size: 16px;
     text-transform: uppercase;
-    width: 25%;
+    width: 15%;
     font-weight: bold;
     background: rgb(29,57,88);
     background: linear-gradient(122deg, rgba(29,57,88,1) 0%, rgba(81,154,156,1) 100%, rgba(98,0,255,1) 100%);

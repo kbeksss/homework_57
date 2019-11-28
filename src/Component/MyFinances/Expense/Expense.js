@@ -5,6 +5,7 @@ const Expense = (props) => {
     return (
         <div className='Expense'>
             <span>{props.name}</span>
+            <span>spent for :  {props.type}</span>
             <span>{props.cost}</span>
             <span> KGS </span>
             <span className='Remover' onClick={props.remove}>X</span>

@@ -9,7 +9,7 @@
 .MyFinances .Total{
     background: #3d737c;
     position: absolute;
-    bottom: 20px;
+    top: 430px;
     padding: 10px 15px;
     border-radius: 5px;
     transform: translateX(-50%);

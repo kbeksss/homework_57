@@ -10,6 +10,7 @@ const MyFinances = (props) => {
                 <Expense
                     key={expense.id}
                     name={expense.name}
+                    type={expense.type}
                     cost={expense.cost}
                     remove={() => props.remove(expense.id)}
                 />
