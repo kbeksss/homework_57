@@ -3,11 +3,11 @@ import './MyForm.css';
 
 const MyForm = (props) => {
     return (
-        <form className='MyForm'>
-            <input type="text"/>
-            <input type="number"/>
+        <form className='MyForm' onSubmit={props.submit}>
+            <input type="text" value={props.name} onChange={props.changeName}/>
+            <input type="number" value={props.cost} onChange={props.changeCost}/>
             <span> KGS </span>
-            <button type='submit' onClick={props.add}>Add</button>
+            <button type='submit' className='Btn'>Add</button>
         </form>
     );
 };

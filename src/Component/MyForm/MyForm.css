@@ -1,3 +1,36 @@
 .MyForm{
     display: flex;
+    justify-content: space-around;
+}
+.MyForm input[type='text']{
+    width: 45%;
+}
+
+.MyForm input[type='number']{
+    width: 15%;
+    margin-left: 5px;
+}
+
+.MyForm span{
+    width: 15%;
+}
+
+.Btn{
+    width: 25%;
+    font-weight: bold;
+    background: rgb(29,57,88);
+    background: linear-gradient(122deg, rgba(29,57,88,1) 0%, rgba(81,154,156,1) 100%, rgba(98,0,255,1) 100%);
+    outline: none;
+    color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 3px 1px 0 rgba(29, 57, 88, 0.75);
+    -moz-box-shadow:    0 3px 1px 0 rgba(29, 57, 88, 0.75);
+    box-shadow:         0 3px 1px 0 rgba(29, 57, 88, 0.75);
+}
+
+.Btn:active{
+    background: rgb(29,57,88);
+    background: linear-gradient(180deg, rgba(29,57,88,1) 0%, rgba(81,154,156,1) 100%, rgba(98,0,255,1) 100%);
+    transform: translateY(3px);
+    box-shadow: none;
 }
